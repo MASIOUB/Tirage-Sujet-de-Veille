@@ -14,20 +14,6 @@
 # For generate dates, I used a moment js library
 
 # For skip weekend date, I used this function:
-
-let D = moment().format("YYYY-MM-DD");
-let counter = 1;
-
-function skippingWekeend(date, days) {
-    let d = moment(new Date(date)).add(Math.floor(days / 5) * 7, "d");
-    let remaining = days % 5;
-    while (remaining) {
-        d.add(1, "d");
-        if (d.day() !== 0 && d.day() !== 6) remaining--;
-    }
-    return d.format("YYYY-MM-DD");
-}
-
 ```javascript
 let D = moment().format("YYYY-MM-DD");
 let counter = 1;
